@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eureka-service-deployment
+  labels:
+    app: eureka-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: eureka-service
+  template:
+    metadata:
+      labels:
+        app: eureka-service
+    spec:
+      containers:
+        - name: eureka-service
+          image: serviceregistry:pod
+          resources:
+            limits:
+              memory: "500Mi"
+              cpu: "50m"
+          ports:
+            - containerPort: 8761

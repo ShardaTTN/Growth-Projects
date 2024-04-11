@@ -1,0 +1,55 @@
+server:
+  port: 8080
+
+spring:
+  cache:
+    type: redis
+
+  application:
+    name: User-Service
+
+  data:
+    mongodb:
+      #uri: mongodb+srv://user:user@cluster0.ipwdssf.mongodb.net/UserDB?retryWrites=true&w=majority
+      uri: mongodb://localhost:27017/UserDB
+    redis:
+      host: 43.204.238.245
+      port: 6379
+
+  main:
+    allow-bean-definition-overriding: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://13.126.68.85:8761/eureka
+
+rating:
+  service:
+    uri: http://13.233.245.25:8082/ratings
+
+hotel:
+    service:
+      uri: http://65.0.123.114:8081/hotels
+
+amazon:
+  s3:
+    bucket-name: shardatestbucket
+
+cloud:
+    aws:
+      region:
+        static: ap-south-1
+        auto: false
+      credentials:
+        access-key:
+        secret-key:
+      end-point:
+        uri:
+
+
+

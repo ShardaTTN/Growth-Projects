@@ -1,0 +1,31 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: RATING-SERVICE
+  datasource:
+    #url: jdbc:mysql://localhost:3306/RatingDB
+    url: jdbc:mysql://avnadmin:AVNS_VDE-UgMb5R2h9T0E-YC@mysql-d20a642-shardathakur223-9962.a.aivencloud.com:16868/defaultdb?ssl-mode=REQUIRED
+    username: avnadmin
+    #username: root
+    password: AVNS_VDE-UgMb5R2h9T0E-YC
+    #password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+    properties:
+      dialect : org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://13.126.68.85:8761/eureka
