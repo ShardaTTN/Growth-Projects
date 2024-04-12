@@ -1,6 +1,6 @@
 # Growth Framework Projects
 ## OverView
-This project serves as a proof-of-concept (POC) implementation of various functionalities using AWS services like ECS, SQS, S3, API Gateway, along with the implementation of a Feign client and Redis cache. It also utilizes Docker for containerization of application components and Kubernetes for container orchestration and management. The project is developed using Java 17.
+This project serves as a proof-of-concept (POC) implementation of various functionalities using AWS services like ECS, SQS, S3, API Gateway, along with the implementation of a Feign client and Redis cache. It also utilizes Docker for containerization of application components and Kubernetes for container orchestration and management. the project used Eureka Server for service registration and discovery. The project is developed using Java 17.
 ## Features
 - Utilizes AWS ECS for containerized application deployment and management.
 - Integrates SQS (Simple Queue Service) for reliable message queuing.
@@ -10,6 +10,7 @@ This project serves as a proof-of-concept (POC) implementation of various functi
 - Implements Redis cache for fast data retrieval and caching.
 - Utilizes Docker for containerization of application components.
 - Implements Kubernetes for container orchestration and management.
+- Employs Eureka Server for service registration and discovery.
 ## Technologies Used
 - AWS ECS
 - AWS SQS
@@ -21,3 +22,4 @@ This project serves as a proof-of-concept (POC) implementation of various functi
 - Kubernetes
 - Java 17
 - Spring Boot
+- Eureka Server
